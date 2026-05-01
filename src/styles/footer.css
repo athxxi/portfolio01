@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: transparent;
+}
+
+.footer .tagline {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.7;
+}

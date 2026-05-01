@@ -1,0 +1,142 @@
+/* Floating Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 90%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effect - expands slightly and becomes more opaque */
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Scroll effect - adds shadow when scrolled */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4a4a4a;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  letter-spacing: 0.3px;
+}
+
+/* Hover effect on individual links */
+.nav-link:hover {
+  color: #000000;
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Active link styling */
+.nav-link.active {
+  color: #000000;
+  background: rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  position: relative;
+}
+
+/* Optional: Add a subtle indicator for active link */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #000000;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    top: 10px;
+    width: calc(100% - 20px);
+    max-width: none;
+    border-radius: 50px;
+  }
+  
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-menu {
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-link.active::after {
+    width: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    top: 8px;
+    width: calc(100% - 16px);
+  }
+  
+  .nav-container {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .nav-link {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav-menu {
+    gap: 0.2rem;
+  }
+}
+
+/* Optional: Add scroll listener to add class when scrolled */
+/* Add this to your Navbar component if you want scroll effect */

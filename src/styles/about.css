@@ -1,0 +1,278 @@
+/* About Container - Full Width */
+.about-container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Scrolling Grid Background - Same as Home */
+.grid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent calc(80px - 1px),
+      rgba(0, 0, 0, 0.1) calc(80px - 1px),
+      rgba(0, 0, 0, 0.1) 80px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent calc(80px - 1px),
+      rgba(0, 0, 0, 0.1) calc(80px - 1px),
+      rgba(0, 0, 0, 0.1) 80px
+    );
+}
+
+/* About Hero Section */
+.about-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 2rem 4rem 2rem;
+}
+
+.about-content {
+  width: 100%;
+}
+
+.about-name {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.about-intro {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+/* Skills Section */
+.skills {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.skill-category {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.2px;
+}
+
+.skill-category p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Closing Line */
+.closing-line {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.closing-line p {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #555;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .grid-lines {
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent calc(60px - 1px),
+        rgba(0, 0, 0, 0.05) calc(60px - 1px),
+        rgba(0, 0, 0, 0.05) 60px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent calc(60px - 1px),
+        rgba(0, 0, 0, 0.05) calc(60px - 1px),
+        rgba(0, 0, 0, 0.05) 60px
+      );
+  }
+}
+
+@media (max-width: 900px) {
+  .about-name {
+    font-size: 3rem;
+  }
+  
+  .about-intro {
+    font-size: 1.2rem;
+  }
+  
+  .skills-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 1.5rem 3rem 1.5rem;
+  }
+  
+  .about-name {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-intro {
+    font-size: 1.1rem;
+  }
+  
+  .about-text {
+    font-size: 0.95rem;
+  }
+  
+  .skills {
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .skill-category {
+    padding: 1.2rem;
+  }
+  
+  .closing-line p {
+    font-size: 0.85rem;
+  }
+  
+  .grid-lines {
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent calc(40px - 1px),
+        rgba(0, 0, 0, 0.05) calc(40px - 1px),
+        rgba(0, 0, 0, 0.05) 40px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent calc(40px - 1px),
+        rgba(0, 0, 0, 0.05) calc(40px - 1px),
+        rgba(0, 0, 0, 0.05) 40px
+      );
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 70px 1rem 2rem 1rem;
+  }
+  
+  .about-name {
+    font-size: 2rem;
+  }
+  
+  .about-intro {
+    font-size: 1rem;
+  }
+  
+  .about-text {
+    font-size: 0.85rem;
+  }
+  
+  .skills {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+  
+  .skill-category h3 {
+    font-size: 1rem;
+  }
+  
+  .skill-category p {
+    font-size: 0.8rem;
+  }
+  
+  .closing-line p {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .grid-lines {
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent calc(30px - 1px),
+        rgba(0, 0, 0, 0.05) calc(30px - 1px),
+        rgba(0, 0, 0, 0.05) 30px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent calc(30px - 1px),
+        rgba(0, 0, 0, 0.05) calc(30px - 1px),
+        rgba(0, 0, 0, 0.05) 30px
+      );
+  }
+}
