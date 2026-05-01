@@ -256,6 +256,7 @@ const Projects = () => {
               {/* Screenshots Gallery */}
               {projectImages[selectedProject.folder] && projectImages[selectedProject.folder].length > 0 && (
                 <div className="modal-gallery">
+                   <h3>Project Images</h3>
                   
                   <div className="gallery-grid">
                     {projectImages[selectedProject.folder].map((img, idx) => (
