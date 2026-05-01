@@ -9,6 +9,14 @@ const Home = () => {
         <div className="grid-lines"></div>
       </div>
 
+      {/* Mobile Spacer - Only visible on mobile */}
+      <div className="mobile-spacer"></div>
+      {/* Mobile Spacer - Only visible on mobile */}
+      <div className="mobile-spacer"></div>
+      {/* Mobile Spacer - Only visible on mobile */}
+      <div className="mobile-spacer"></div>
+      
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">

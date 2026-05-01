@@ -40,6 +40,27 @@
     );
 }
 
+
+
+/* Mobile Spacer - Only visible on mobile devices */
+.mobile-spacer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-spacer {
+    display: block;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-spacer {
+    height: 100px;
+  }
+}
+
+
 /* Content Container */
 .hero,
 .experience,
