@@ -252,11 +252,12 @@ const Projects = () => {
             <div className="modal-content-inner">
               <h2 className="modal-title">{selectedProject.title}</h2>
               <p className="modal-subtitle">{selectedProject.subtitle}</p>
+              <h3>Project Images</h3>
               
               {/* Screenshots Gallery */}
               {projectImages[selectedProject.folder] && projectImages[selectedProject.folder].length > 0 && (
                 <div className="modal-gallery">
-                   <h3>Project Images</h3>
+                  
                   
                   <div className="gallery-grid">
                     {projectImages[selectedProject.folder].map((img, idx) => (
