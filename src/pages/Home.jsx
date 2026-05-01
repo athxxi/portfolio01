@@ -13,8 +13,7 @@ const Home = () => {
       <div className="mobile-spacer"></div>
       {/* Mobile Spacer - Only visible on mobile */}
       <div className="mobile-spacer"></div>
-      {/* Mobile Spacer - Only visible on mobile */}
-      <div className="mobile-spacer"></div>
+      
       
 
       {/* Hero Section */}
